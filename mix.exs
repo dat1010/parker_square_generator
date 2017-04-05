@@ -15,7 +15,7 @@ defmodule ParkerSquareGenerator.Mixfile do
   # Type "mix help compile.app" for more information
   def application do
     # Specify extra applications you'll use from Erlang/Elixir
-    [extra_applications: [:logger],
+    [extra_applications: [:logger, :quantum, :extwitter],
      mod: {ParkerSquareGenerator.Application, []}]
   end
 
@@ -29,6 +29,9 @@ defmodule ParkerSquareGenerator.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
-    []
+    [{:credo, "~> 0.7.2"},
+     {:quantum, "~> 1.9"},
+     {:extwitter, "~> 0.8.3"},
+     {:oauth2, "~> 0.9.1"}]
   end
 end
